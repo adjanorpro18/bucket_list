@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ idea.title }} | {{ parent() }}  {% endblock %}
+
+{% block main %}
+
+    <h1>Bucket Details</h1>
+
+
+    <h2>Titre :    {{ idea.title }}</h2>
+    <h3>Idee :     {{ idea.description }}</h3>
+    <h3>Auteur :   {{ idea.author }} </h3>
+    <h3>Date :     {{ idea.dateCreated | date('d/m/Y, H:i:s') }}</h3>
+    <h3>Category : {{ idea.category.name }}</h3>
+
+
+{% endblock %}
+

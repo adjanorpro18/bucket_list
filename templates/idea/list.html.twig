@@ -1,20 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IdeaController!{% endblock %}
+{% block title %} {{ parent() }} - List {% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block main %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Our Bucket-List</h1>
+   {#  <form action="">
+        <select name="title" id="title">
+            <option value="">Title</option>
+            {% set currentTitle = null %}
+            {% for idea in ideas%}
+                {% if currentTitle != idea.title %}
+                    <option value="{{ idea.title }}">{{ idea.title }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <select name="title" id="title">
+            <option value="">Author</option>
+            {% set currentAuthor = null %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/User/MAMP/bucket_list/src/Controller/IdeaController.php'|file_link(0) }}">src/Controller/IdeaController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/User/MAMP/bucket_list/templates/idea/index.html.twig'|file_link(0) }}">templates/idea/index.html.twig</a></code></li>
-    </ul>
-</div>
+            {% for idea in ideas %}
+                {% if currentAuthor != idea.author %}
+                    <option value="{{ idea.author }}">{{ idea.author }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <select name="dateCreated" id="dateCreated">
+            <option value="">Date</option>
+            {% set currentDate = null %}
+            {% for idea in ideas %}
+                {% if currentDate != idea.dateCreated %}
+                    <option value="{{ idea.dateCreated | date('d/m/Y, H:i:s')}}">{{ idea.dateCreated | date('d/m/Y, H:i:s')}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+
+    </form> #}
+    {% for idea in ideas %}
+            <ul class=" idea">
+                <li> <a href="{{ path('idea_detail', {'id': idea.id}) }}"> {{ idea.description  }} </a> | {{ idea.category.name }} </li>
+            </ul>
+    {% endfor %}
+
 {% endblock %}
+

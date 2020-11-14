@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\IdeaRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * @UniqueEntity(fields={"description"})
  * @ORM\Entity(repositoryClass=IdeaRepository::class)
  */
 class Idea
@@ -18,29 +21,43 @@ class Idea
     private $id;
 
     /**
+     * @Assert\Length (min="5 characters", max="20 characters")
+     * @Assert\NotBlank ()
      * @ORM\Column(type="string", length=250)
      */
     private $title;
 
     /**
-     * @ORM\Column(type="text")
+     * @Assert\Length(min="15", max="100")
+     * @Assert\NotBlank ()
+     * @ORM\Column(type="text", length=255)
      */
     private $description;
 
     /**
+     * @Assert\NotBlank ()
      * @ORM\Column(type="string", length=50)
      */
     private $author;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
+     *
      */
     private $isPublished;
 
     /**
+     * @Assert\DateTime(message="This value is not a valid date.")
+     * @Assert\LessThanOrEqual("now")
      * @ORM\Column(type="datetime")
      */
     private $dateCreated;
+
+    /**
+     * @ORM\JoinColumn()
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="ideas")
+     */
+    private $Category;
 
     public function getId(): ?int
     {
@@ -103,6 +120,18 @@ class Idea
     public function setDateCreated(\DateTimeInterface $dateCreated): self
     {
         $this->dateCreated = $dateCreated;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->Category;
+    }
+
+    public function setCategory(?Category $Category): self
+    {
+        $this->Category = $Category;
 
         return $this;
     }

@@ -2,11 +2,63 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %} Bucket {% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags("app") }}
+
+            <link rel="icon" href="{{ asset('img/favicon.png') }}">
+
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container">
+            <header>
+                    <div class="header-link">
+                        <a href="{{ path('home') }}"><h1>Bucket-List <img src="{{ asset('img/logo.png') }}" alt="bucket-image"></h1></a>
+                    </div >
+                    <div class="header-nav">
+                        <ul>
+                            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <li><a href=" {{ path('app_logout') }}">Logout</a></li>
+                                <li><a href=" {{ path('idea_add') }}">Add your idea</a></li>
+                                <li><a href=" {{ path('home') }}">Home</a></li>
+                                <li><a href=" {{ path('idea_list') }}">List</a></li>
+
+                                {% else%}
+                                    <li><a href=" {{ path('app_login') }}">Login</a></li>
+                                    <li><a href=" {{ path('register') }}">Register</a></li>
+                            {% endif %}
+
+
+
+                        </ul>
+                    </div>
+            </header>
+
+                {% for label, messages in app.flashes %}
+                    {% for message in messages %}
+                        <div class="flash flash-{{ label }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+            <main>
+                {% block main %}
+
+                {% endblock %}
+            </main>
+            <footer>
+                <hr>
+                &copy; {{  "now" |date("Y")  }} Bucket-List
+            </footer>
+        </div>
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
     </body>
 </html>

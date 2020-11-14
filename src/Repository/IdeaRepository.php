@@ -19,22 +19,26 @@ class IdeaRepository extends ServiceEntityRepository
         parent::__construct($registry, Idea::class);
     }
 
-    // /**
-    //  * @return Idea[] Returns an array of Idea objects
+    /**
+     * @todo:la fonction pour filtrer les idées
+     */
+
+    /**
+    //  * @todo: jointure avec Entity Category
     //  */
-    /*
-    public function findByExampleField($value)
+
+    public function findListIdeaWithCategories()
     {
         return $this->createQueryBuilder('i')
-            ->andWhere('i.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('i.id', 'ASC')
-            ->setMaxResults(10)
+            ->addSelect('c')
+            ->andWhere('i.isPublished = true')
+            ->join('i.Category', 'c')
+            ->orderBy('i.dateCreated', 'DESC')
+            ->setMaxResults(30)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Idea
