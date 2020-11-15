@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -11,44 +14,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d864b7a-b172-440b-aed6-d2a4e1ebe014" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/validator.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201111080948.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201111084446.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201111210330.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201112104731.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/bucket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/BucketType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/user/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bucket_list.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bucket_list.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IdeaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Idea.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Idea.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/IdeaRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/IdeaRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Authenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Authenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/about.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/idea/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/idea/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/idea/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/idea/detail.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/idea/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/idea/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav/link.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +36,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/assets/styles/app.css" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Entity/User.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/config/packages/security.yaml" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Security/Authenticator.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Entity/Category.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Controller/SecurityController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
@@ -172,7 +144,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -198,7 +170,10 @@
       <workItem from="1605213663073" duration="878000" />
       <workItem from="1605249114203" duration="9234000" />
       <workItem from="1605304008403" duration="3469000" />
-      <workItem from="1605349167963" duration="8695000" />
+      <workItem from="1605349167963" duration="12849000" />
+      <workItem from="1605375907783" duration="677000" />
+      <workItem from="1605423011724" duration="6582000" />
+      <workItem from="1605430624169" duration="684000" />
     </task>
     <servers />
   </component>
@@ -225,14 +200,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="528" y="152" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605175435161" />
-    <state x="259" y="92" key="SettingsEditor" timestamp="1605166089477">
+    <state x="748" y="178" key="RollbackChangesDialog" timestamp="1605375959751">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="259" y="92" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605166089477" />
-    <state x="379" y="197" width="670" height="676" key="search.everywhere.popup" timestamp="1605018226428">
+    <state x="748" y="178" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605375959751" />
+    <state x="259" y="92" key="SettingsEditor" timestamp="1605423289145">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="379" y="197" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605018226428" />
+    <state x="259" y="92" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605423289145" />
+    <state x="318" y="0" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605376416962" />
+    <state x="379" y="197" width="670" height="676" key="search.everywhere.popup" timestamp="1605429390584">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="379" y="197" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605429390584" />
+    <state x="379" y="197" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605376178672" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

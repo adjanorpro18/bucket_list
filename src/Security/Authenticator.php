@@ -96,7 +96,7 @@ class Authenticator extends AbstractFormLoginAuthenticator implements PasswordAu
             return new RedirectResponse($targetPath);
         }
 
-         return new RedirectResponse($this->urlGenerator->generate('idea'));//rediriger vers cette page si tout s'est bine passé
+         return new RedirectResponse($this->urlGenerator->generate('/idea'));//rediriger vers cette page si tout s'est bine passé
     }
 
     protected function getLoginUrl()
